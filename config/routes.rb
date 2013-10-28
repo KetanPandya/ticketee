@@ -16,6 +16,9 @@ Ticketee::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
+
   resources :projects do
     resources :tickets
   end
